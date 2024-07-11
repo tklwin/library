@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department 2 Documents</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Department 2 Documents</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="department1.html">Department 1</a></li>
+                <li><a href="department2.html">Department 2</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Documents</h2>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="viewPDF('pdfs/department1/doc1.pdf')">Document 1</a></li>
+            <li><a href="javascript:void(0)" onclick="viewPDF('pdfs/department1/doc2.pdf')">Document 2</a></li>
+            <!-- Add more documents as needed -->
+        </ul>
+        <div id="pdfViewer" style="margin-top: 20px;">
+            <iframe id="pdfFrame" src="" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+    <script>
+        function viewPDF(pdfUrl) {
+            document.getElementById('pdfFrame').src = pdfUrl;
+        }
+    </script>
+</body>
+</html>
